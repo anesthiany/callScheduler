@@ -135,11 +135,22 @@ def main():
         return
     
     # Analyze existing data
-    call_schedules, anesthesia_groups = analyze_schedules_and_groups()
+    call_schedules, employment_groups = analyze_schedules_and_groups()
     
     if not call_schedules:
         print("\nNo call-related schedules identified. Please review the schedule list manually.")
         return
+    
+    # Get user roster to test FTE data
+    try:
+        users = client.get_user_roster()
+        sample_user_ids = [int(user['userid']) for user in users[:5]]  # Get first 5 user IDs
+        
+        # Test FTE data retrieval
+        test_fte_data_retrieval(client, sample_user_ids)
+        
+    except Exception as e:
+        print(f"Error getting user roster for FTE testing: {e}")
     
     # Ask user to confirm which schedules to analyze
     print(f"\nFound {len(call_schedules)} call-related schedules.")
@@ -156,9 +167,10 @@ def main():
     print("=" * 60)
     print("\nNext steps:")
     print("1. Review the identified call schedules")
-    print("2. Review the anesthesia-related user groups")
-    print("3. Look at recent assignments to understand your current patterns")
-    print("4. Define scheduling constraints for the optimizer")
+    print("2. Review the employment-related user groups")
+    print("3. Check FTE field names for your system")
+    print("4. Look at recent assignments to understand your current patterns")
+    print("5. Define scheduling constraints for the optimizer")
 
 if __name__ == "__main__":
     main()

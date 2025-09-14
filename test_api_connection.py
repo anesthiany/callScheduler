@@ -58,6 +58,7 @@ def main():
             print("   Sample groups:")
             for group in groups[:3]:  # Show first 3
                 print(f"     - {group['groupName']} (ID: {group['groupId']})")
+            print(f"   ... and {len(groups)-3} more groups")
     except Exception as e:
         print(f"❌ User groups failed: {e}")
     
