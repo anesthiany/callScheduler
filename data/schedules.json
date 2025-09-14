@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Anesthetizing Locations",
+    "id": "16172"
+  },
+  {
+    "name": "Available Schedule",
+    "id": "16518"
+  },
+  {
+    "name": "Call Schedule",
+    "id": "383"
+  },
+  {
+    "name": "Holiday Block Credit",
+    "id": "16521"
+  },
+  {
+    "name": "No Call Requests",
+    "id": "385"
+  },
+  {
+    "name": "Pecking Order",
+    "id": "16171"
+  },
+  {
+    "name": "Physician Part Time",
+    "id": "386"
+  },
+  {
+    "name": "Physician Self-Schedule",
+    "id": "16930"
+  },
+  {
+    "name": "Tier Schedule",
+    "id": "410"
+  },
+  {
+    "name": "Vacation",
+    "id": "384"
+  },
+  {
+    "name": "Vacation Limit",
+    "id": "15471"
+  }
+]

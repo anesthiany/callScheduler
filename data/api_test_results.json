@@ -1,0 +1,1585 @@
+{
+  "total_users": 780,
+  "total_schedules": 11,
+  "total_groups": 300,
+  "sample_users": [
+    {
+      "fname": "Baylor",
+      "lname": "Admin",
+      "coregroup": "NonClinical",
+      "fullname": "Baylor Admin",
+      "usercode": "Baylor",
+      "title": null,
+      "userid": "701520",
+      "email": "baylor@baylor.com"
+    },
+    {
+      "fname": "Esther",
+      "lname": "Akinsoyinu",
+      "coregroup": "NonClinical",
+      "fullname": "Esther Akinsoyinu",
+      "usercode": "akins",
+      "title": null,
+      "userid": "696795",
+      "email": "eakinsoyinu@metroanesthesia.com"
+    },
+    {
+      "fname": "Chrystale",
+      "lname": "Cigainero",
+      "coregroup": "NonClinical",
+      "fullname": "Chrystale Cigainero",
+      "usercode": "Cigai",
+      "title": "NonClinical",
+      "userid": "4800",
+      "email": "ccigainero@metroanesthesia.com"
+    }
+  ],
+  "available_schedules": [
+    {
+      "name": "Anesthetizing Locations",
+      "id": "16172"
+    },
+    {
+      "name": "Available Schedule",
+      "id": "16518"
+    },
+    {
+      "name": "Call Schedule",
+      "id": "383"
+    },
+    {
+      "name": "Holiday Block Credit",
+      "id": "16521"
+    },
+    {
+      "name": "No Call Requests",
+      "id": "385"
+    },
+    {
+      "name": "Pecking Order",
+      "id": "16171"
+    },
+    {
+      "name": "Physician Part Time",
+      "id": "386"
+    },
+    {
+      "name": "Physician Self-Schedule",
+      "id": "16930"
+    },
+    {
+      "name": "Tier Schedule",
+      "id": "410"
+    },
+    {
+      "name": "Vacation",
+      "id": "384"
+    },
+    {
+      "name": "Vacation Limit",
+      "id": "15471"
+    }
+  ],
+  "user_groups": [
+    {
+      "groupId": "1007",
+      "groupName": "NonClinical",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1008",
+      "groupName": "Physician",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10560",
+      "groupName": "Surgeon",
+      "coreGroup": false
+    },
+    {
+      "groupId": "5091",
+      "groupName": "Vacation Limit",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12658",
+      "groupName": "Administrator",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1009",
+      "groupName": "Associate",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1017",
+      "groupName": "Auto Call: Chief LPMC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1014",
+      "groupName": "Auto Call: Chief MCA",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1015",
+      "groupName": "Auto Call: Chief MCAO",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1016",
+      "groupName": "Auto Call: Chief MCL",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1018",
+      "groupName": "Auto Call: Chief PHR",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3598",
+      "groupName": "Auto Call: Chief THDN",
+      "coreGroup": false
+    },
+    {
+      "groupId": "9180",
+      "groupName": "Auto Call: CMCG",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12429",
+      "groupName": "Auto Call: CMCG Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12428",
+      "groupName": "Auto Call: CMCG Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12430",
+      "groupName": "Auto Call: CMCG Sat",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12431",
+      "groupName": "Auto Call: CMCG Sun",
+      "coreGroup": false
+    },
+    {
+      "groupId": "8147",
+      "groupName": "Auto Call: CMCO Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "7039",
+      "groupName": "Auto Call: CMCO Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "8148",
+      "groupName": "Auto Call: CMCO Sat",
+      "coreGroup": false
+    },
+    {
+      "groupId": "8149",
+      "groupName": "Auto Call: CMCO Sun",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10317",
+      "groupName": "Auto Call: LCG Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10316",
+      "groupName": "Auto Call: LCG Sat",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10318",
+      "groupName": "Auto Call: LCG Sun",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10313",
+      "groupName": "Auto Call: LCO Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10314",
+      "groupName": "Auto Call: LCO Sat",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10315",
+      "groupName": "Auto Call: LCO Sun",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1034",
+      "groupName": "Auto Call: LP Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1023",
+      "groupName": "Auto Call: LP7 Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1022",
+      "groupName": "Auto Call: LPG Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "6297",
+      "groupName": "Auto Call: LPO Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "6304",
+      "groupName": "Auto Call: LPO Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "6303",
+      "groupName": "Auto Call: LPO Sat",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1026",
+      "groupName": "Auto Call: MCA SatG",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1028",
+      "groupName": "Auto Call: MCA SatO",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1027",
+      "groupName": "Auto Call: MCA SunG",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1029",
+      "groupName": "Auto Call: MCA SunO",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1036",
+      "groupName": "Auto Call: MCAG Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1037",
+      "groupName": "Auto Call: MCAO Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "9877",
+      "groupName": "Auto Call: MCAT",
+      "coreGroup": false
+    },
+    {
+      "groupId": "6945",
+      "groupName": "Auto Call: MCAT Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "8161",
+      "groupName": "Auto Call: MCAT Sat",
+      "coreGroup": false
+    },
+    {
+      "groupId": "8162",
+      "groupName": "Auto Call: MCAT Sun",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13533",
+      "groupName": "Auto Call: MCKG Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13532",
+      "groupName": "Auto Call: MCKG Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13534",
+      "groupName": "Auto Call: MCKG Sat",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13536",
+      "groupName": "Auto Call: MCKT Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13535",
+      "groupName": "Auto Call: MCKT Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13537",
+      "groupName": "Auto Call: MCKT Sat",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1030",
+      "groupName": "Auto Call: MCL SatG",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1032",
+      "groupName": "Auto Call: MCL SatO",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1031",
+      "groupName": "Auto Call: MCL SunG",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1033",
+      "groupName": "Auto Call: MCL SunO",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1038",
+      "groupName": "Auto Call: MCLG Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1039",
+      "groupName": "Auto Call: MCLO Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10121",
+      "groupName": "Auto Call: NE Mon-Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10120",
+      "groupName": "Auto Call: NE Sat-Sun",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1011",
+      "groupName": "Auto Call: Non-Call Partner",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10126",
+      "groupName": "Auto Call: P1+P2",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1035",
+      "groupName": "Auto Call: PHR Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1024",
+      "groupName": "Auto Call: PHR1 Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1025",
+      "groupName": "Auto Call: PHR2 Fri",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3550",
+      "groupName": "Auto Call: THDN SatG",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3551",
+      "groupName": "Auto Call: THDN SatO",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3552",
+      "groupName": "Auto Call: THDN SunG",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3553",
+      "groupName": "Auto Call: THDN SunO",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3548",
+      "groupName": "Auto Call: THDNG Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3549",
+      "groupName": "Auto Call: THDNO Mon-Thu",
+      "coreGroup": false
+    },
+    {
+      "groupId": "7034",
+      "groupName": "Auto Call: Tier 1 CMC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10324",
+      "groupName": "Auto Call: Tier 1 LC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1050",
+      "groupName": "Auto Call: Tier 1 LPH",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1042",
+      "groupName": "Auto Call: Tier 1 MCA",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1046",
+      "groupName": "Auto Call: Tier 1 MCL",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1054",
+      "groupName": "Auto Call: Tier 1 PHR",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3522",
+      "groupName": "Auto Call: Tier 1 THDN",
+      "coreGroup": false
+    },
+    {
+      "groupId": "7035",
+      "groupName": "Auto Call: Tier 2 CMC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10325",
+      "groupName": "Auto Call: Tier 2 LC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1051",
+      "groupName": "Auto Call: Tier 2 LPH",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1043",
+      "groupName": "Auto Call: Tier 2 MCA",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1047",
+      "groupName": "Auto Call: Tier 2 MCL",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1055",
+      "groupName": "Auto Call: Tier 2 PHR",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3523",
+      "groupName": "Auto Call: Tier 2 THDN",
+      "coreGroup": false
+    },
+    {
+      "groupId": "7036",
+      "groupName": "Auto Call: Tier 3 CMC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10326",
+      "groupName": "Auto Call: Tier 3 LC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1052",
+      "groupName": "Auto Call: Tier 3 LPH",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1044",
+      "groupName": "Auto Call: Tier 3 MCA",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1048",
+      "groupName": "Auto Call: Tier 3 MCL",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1056",
+      "groupName": "Auto Call: Tier 3 PHR",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3524",
+      "groupName": "Auto Call: Tier 3 THDN",
+      "coreGroup": false
+    },
+    {
+      "groupId": "7037",
+      "groupName": "Auto Call: Tier 4 CMC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10327",
+      "groupName": "Auto Call: Tier 4 LC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1053",
+      "groupName": "Auto Call: Tier 4 LPH",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1045",
+      "groupName": "Auto Call: Tier 4 MCA",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1049",
+      "groupName": "Auto Call: Tier 4 MCL",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1057",
+      "groupName": "Auto Call: Tier 4 PHR",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3525",
+      "groupName": "Auto Call: Tier 4 THDN",
+      "coreGroup": false
+    },
+    {
+      "groupId": "14270",
+      "groupName": "Auto Call:MCAN",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12178",
+      "groupName": "Auto Notify: BB Drop",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13933",
+      "groupName": "Cert: BSWQA",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13932",
+      "groupName": "Cert: PALS",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13077",
+      "groupName": "Clinician",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13924",
+      "groupName": "Cred Call CV",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12427",
+      "groupName": "Cred Call: CMCG Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "7024",
+      "groupName": "Cred Call: CMCO Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1019",
+      "groupName": "Cred Call: Doctors Call",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10312",
+      "groupName": "Cred Call: LC Call pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1060",
+      "groupName": "Cred Call: LPH Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1058",
+      "groupName": "Cred Call: MCA Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1013",
+      "groupName": "Cred Call: MCA-Sat Volunteer Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13307",
+      "groupName": "Cred Call: MCK Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1059",
+      "groupName": "Cred Call: MCL Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1012",
+      "groupName": "Cred Call: MCL-Sat Volunteer Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13211",
+      "groupName": "Cred Call: NE Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1061",
+      "groupName": "Cred Call: PHR Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "3513",
+      "groupName": "Cred Call: THDN Call Pool",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13395",
+      "groupName": "Cred Daily: Aduddell Office",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10565",
+      "groupName": "Cred Daily: Baylor Plano",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10569",
+      "groupName": "Cred Daily: Baylor Uptown",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10568",
+      "groupName": "Cred Daily: BPASC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11617",
+      "groupName": "Cred Daily: BPHRT",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10566",
+      "groupName": "Cred Daily: BSH Las Colinas",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10567",
+      "groupName": "Cred Daily: BSND",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10571",
+      "groupName": "Cred Daily: Centennial SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10570",
+      "groupName": "Cred Daily: CMC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10572",
+      "groupName": "Cred Daily: Cosmetic SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11907",
+      "groupName": "Cred Daily: CSA Texas",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10573",
+      "groupName": "Cred Daily: Dallas Pain Center",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10574",
+      "groupName": "Cred Daily: Dallas SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10576",
+      "groupName": "Cred Daily: Denton ASC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10575",
+      "groupName": "Cred Daily: DSP PDC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10577",
+      "groupName": "Cred Daily: Fertility Center",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13755",
+      "groupName": "Cred Daily: First Baptist Medical Center",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12859",
+      "groupName": "Cred Daily: Legent Carrollton",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11606",
+      "groupName": "Cred Daily: Legent Plano",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11610",
+      "groupName": "Cred Daily: Live Oak Surgery",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10579",
+      "groupName": "Cred Daily: LP",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13405",
+      "groupName": "Cred Daily: Mansfield ASC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11615",
+      "groupName": "Cred Daily: Marynick Office",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13402",
+      "groupName": "Cred Daily: MC H+S",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13387",
+      "groupName": "Cred Daily: MC McKinney",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10580",
+      "groupName": "Cred Daily: MCA",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11968",
+      "groupName": "Cred Daily: McKinney SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10581",
+      "groupName": "Cred Daily: MCL",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10583",
+      "groupName": "Cred Daily: Med City ASC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10584",
+      "groupName": "Cred Daily: Med City Dallas",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10582",
+      "groupName": "Cred Daily: Med City Frisco",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13754",
+      "groupName": "Cred Daily: Med City Ortho & Spine Surgery",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10585",
+      "groupName": "Cred Daily: Med City Plano",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11611",
+      "groupName": "Cred Daily: Medical City LC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10587",
+      "groupName": "Cred Daily: Meth Southlake",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10588",
+      "groupName": "Cred Daily: MHFS",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10591",
+      "groupName": "Cred Daily: North Central SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10590",
+      "groupName": "Cred Daily: North Garland SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11613",
+      "groupName": "Cred Daily: North Park",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11612",
+      "groupName": "Cred Daily: Oak Point SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10593",
+      "groupName": "Cred Daily: Park Central SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10594",
+      "groupName": "Cred Daily: Park Cities SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11609",
+      "groupName": "Cred Daily: Pero's Office",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10595",
+      "groupName": "Cred Daily: Pinnacle Oral SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10600",
+      "groupName": "Cred Daily: Plastic SC of Dallas",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10589",
+      "groupName": "Cred Daily: Potter's Office",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10598",
+      "groupName": "Cred Daily: Presby Rockwall",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10599",
+      "groupName": "Cred Daily: Preston Plaza SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11614",
+      "groupName": "Cred Daily: Riordan Medical",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10601",
+      "groupName": "Cred Daily: Rockwall SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13396",
+      "groupName": "Cred Daily: RW Oral",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13302",
+      "groupName": "Cred Daily: Schwartz Office",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10602",
+      "groupName": "Cred Daily: Star Med Ctr",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11616",
+      "groupName": "Cred Daily: Stonebridge SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10603",
+      "groupName": "Cred Daily: SURG Plano",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10604",
+      "groupName": "Cred Daily: Surgery Ctr of Plano",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10607",
+      "groupName": "Cred Daily: THCDS",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10608",
+      "groupName": "Cred Daily: THDN",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10609",
+      "groupName": "Cred Daily: THR Harris Southlake",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11043",
+      "groupName": "Cred Daily: THSCR",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10606",
+      "groupName": "Cred Daily: TIS",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10610",
+      "groupName": "Cred Daily: Trinity Park SC",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13809",
+      "groupName": "Cred Daily: Trinity Regional Hospital",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11044",
+      "groupName": "Cred Daily: Vanguard",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1417",
+      "groupName": "Cred Leave: Admin Vacation",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13740",
+      "groupName": "CRNA",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13756",
+      "groupName": "Eligible: Med City Ortho & Spine",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1010",
+      "groupName": "Partner",
+      "coreGroup": false
+    },
+    {
+      "groupId": "15206",
+      "groupName": "Pedi Fellow",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13309",
+      "groupName": "Physician: Self-Schedule",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13406",
+      "groupName": "Report: Pecking Order",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10408",
+      "groupName": "Rule: All 1st Call limit",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1201",
+      "groupName": "Rule: Caley",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1041",
+      "groupName": "Rule: Cons WD",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1040",
+      "groupName": "Rule: Cons WE",
+      "coreGroup": false
+    },
+    {
+      "groupId": "11081",
+      "groupName": "Rule: Full Time",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10865",
+      "groupName": "Rule: Limit PHR WE",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10124",
+      "groupName": "Rule: No Sat MCAT",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10123",
+      "groupName": "Rule: No Sun MCAT",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10122",
+      "groupName": "Rule: No WD MCAT",
+      "coreGroup": false
+    },
+    {
+      "groupId": "1020",
+      "groupName": "Rule: Part Time",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13327",
+      "groupName": "Rule: Part Time + Self Select",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13744",
+      "groupName": "Rule: PRN Call Only",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13695",
+      "groupName": "Surgeon:  Ayub",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13696",
+      "groupName": "Surgeon:  Blank",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13697",
+      "groupName": "Surgeon:  Butt",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13699",
+      "groupName": "Surgeon:  Chandresekhara",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13702",
+      "groupName": "Surgeon:  Hubbard",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13703",
+      "groupName": "Surgeon:  Kinney",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13704",
+      "groupName": "Surgeon:  Lee (Fred)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13707",
+      "groupName": "Surgeon:  Makohon",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13708",
+      "groupName": "Surgeon:  Maurer",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13710",
+      "groupName": "Surgeon:  Muncy",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13711",
+      "groupName": "Surgeon:  Orozco",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13712",
+      "groupName": "Surgeon:  Pellachia",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13714",
+      "groupName": "Surgeon:  Saing",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13716",
+      "groupName": "Surgeon:  Stephens, Jeff",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13717",
+      "groupName": "Surgeon:  Stone",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13718",
+      "groupName": "Surgeon:  Uddin",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13720",
+      "groupName": "Surgeon:  Walker (THDN)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13721",
+      "groupName": "Surgeon:  Whatley",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13722",
+      "groupName": "Surgeon:  Williams",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12325",
+      "groupName": "Surgeon: Abiodun",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12326",
+      "groupName": "Surgeon: Ahmad (Imad)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10813",
+      "groupName": "Surgeon: Aldrich",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13694",
+      "groupName": "Surgeon: Arora",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10801",
+      "groupName": "Surgeon: Arviso",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13746",
+      "groupName": "Surgeon: Au",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12327",
+      "groupName": "Surgeon: Bender",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13747",
+      "groupName": "Surgeon: Boostrom",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10816",
+      "groupName": "Surgeon: Bosita",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12328",
+      "groupName": "Surgeon: Brancheau",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10817",
+      "groupName": "Surgeon: Britt",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10818",
+      "groupName": "Surgeon: Burney",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12329",
+      "groupName": "Surgeon: Catino",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12330",
+      "groupName": "Surgeon: Cattorini",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13758",
+      "groupName": "Surgeon: Chambers (MCA)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13698",
+      "groupName": "Surgeon: Chambers (THDN)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12331",
+      "groupName": "Surgeon: Chang (Andrew)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12332",
+      "groupName": "Surgeon: Cobos",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12333",
+      "groupName": "Surgeon: Coffey",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12334",
+      "groupName": "Surgeon: Cowart",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12335",
+      "groupName": "Surgeon: Dao (Tuoc)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13700",
+      "groupName": "Surgeon: Dwyer",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13701",
+      "groupName": "Surgeon: Estrera",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10802",
+      "groupName": "Surgeon: Even",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10829",
+      "groupName": "Surgeon: Goodhart",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10819",
+      "groupName": "Surgeon: Graham",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10803",
+      "groupName": "Surgeon: Hardin",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12336",
+      "groupName": "Surgeon: Haslam",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10830",
+      "groupName": "Surgeon: Heerwagen",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12337",
+      "groupName": "Surgeon: Hendawi",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10820",
+      "groupName": "Surgeon: Ju",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12338",
+      "groupName": "Surgeon: Kalra",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13709",
+      "groupName": "Surgeon: Kennedy",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12339",
+      "groupName": "Surgeon: Khaleel",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12340",
+      "groupName": "Surgeon: Koya",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12341",
+      "groupName": "Surgeon: Kraus",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10831",
+      "groupName": "Surgeon: Kulwicki",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10821",
+      "groupName": "Surgeon: Lankford",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13705",
+      "groupName": "Surgeon: Lee (WJ)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12342",
+      "groupName": "Surgeon: Lele",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13706",
+      "groupName": "Surgeon: Levoyer",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10822",
+      "groupName": "Surgeon: Liao",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12343",
+      "groupName": "Surgeon: Littrell (Christina)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12344",
+      "groupName": "Surgeon: Littrell (Nelson)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13748",
+      "groupName": "Surgeon: Luck",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12345",
+      "groupName": "Surgeon: Mammen",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13779",
+      "groupName": "Surgeon: Masel",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10804",
+      "groupName": "Surgeon: Meade",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10832",
+      "groupName": "Surgeon: Meister",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12346",
+      "groupName": "Surgeon: Mosier",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10805",
+      "groupName": "Surgeon: Naftalis",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13753",
+      "groupName": "Surgeon: Ojo",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13749",
+      "groupName": "Surgeon: Olsen",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13750",
+      "groupName": "Surgeon: Ortega",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10833",
+      "groupName": "Surgeon: Padmanabhan",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12347",
+      "groupName": "Surgeon: Patel (Kushal)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10807",
+      "groupName": "Surgeon: Pero",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13751",
+      "groupName": "Surgeon: Pollock",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12348",
+      "groupName": "Surgeon: Potter",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12349",
+      "groupName": "Surgeon: Putman",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13713",
+      "groupName": "Surgeon: Rai",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12350",
+      "groupName": "Surgeon: Ritter",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10827",
+      "groupName": "Surgeon: Rizvi",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10835",
+      "groupName": "Surgeon: Robertson",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10828",
+      "groupName": "Surgeon: Sayani",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13752",
+      "groupName": "Surgeon: Schwartz",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10836",
+      "groupName": "Surgeon: Seligman",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10837",
+      "groupName": "Surgeon: Seroyer",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13761",
+      "groupName": "Surgeon: Sharma",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13715",
+      "groupName": "Surgeon: Sheikh",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10808",
+      "groupName": "Surgeon: Stagnone",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10824",
+      "groupName": "Surgeon: Stuart",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12351",
+      "groupName": "Surgeon: Volpini",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13719",
+      "groupName": "Surgeon: Vora",
+      "coreGroup": false
+    },
+    {
+      "groupId": "13757",
+      "groupName": "Surgeon: Walker (PCSD)",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10825",
+      "groupName": "Surgeon: Wallace",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10809",
+      "groupName": "Surgeon: White",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10810",
+      "groupName": "Surgeon: Woods",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10806",
+      "groupName": "Surgeon: Worrel",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10811",
+      "groupName": "Surgeon: Wyatt",
+      "coreGroup": false
+    },
+    {
+      "groupId": "12352",
+      "groupName": "Surgeon: Wyll",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10812",
+      "groupName": "Surgeon: Yeargain",
+      "coreGroup": false
+    },
+    {
+      "groupId": "10826",
+      "groupName": "Surgeon: Zavala",
+      "coreGroup": false
+    }
+  ]
+}
