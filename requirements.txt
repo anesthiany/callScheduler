@@ -1,0 +1,11 @@
+# Core dependencies for anesthesia call scheduler
+requests>=2.31.0
+pandas>=2.1.0
+openpyxl>=3.1.0
+python-dotenv>=1.0.0
+ortools>=9.7.0
+
+# Development dependencies
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
