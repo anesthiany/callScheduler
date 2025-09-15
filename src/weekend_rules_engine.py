@@ -7,256 +7,153 @@ from datetime import date, timedelta
 from typing import Dict, List, Tuple, Optional, Set
 from dataclasses import dataclass
 
+
 @dataclass
-class WeekendAssignment:
-    """Represents a weekend call assignment"""
-    user_id: int
-    date: date
-    call_type: str
-    is_required_pair: bool = False  # True if this is automatically assigned due to sandwich rule
+class WeekendRule:
+    """Represents a weekend sandwich rule"""
+    trigger_call: str  # The call that triggers the rule
+    trigger_day: str   # 'friday' or 'saturday'
+    result_call: str   # The call that should be assigned
+    result_day: str    # 'saturday' or 'sunday'
+
 
 class WeekendRulesEngine:
-    """Handles weekend sandwich pairing rules"""
+    """Manages weekend sandwich rules for call scheduling"""
     
     def __init__(self):
-        # Define the sandwich pairing rules
-        self.friday_to_weekend_rules = {
-            # Pattern 1: 7-day calls (Friday night) get G-day (Saturday day)
-            'LP7': 'LPG',
-            'MCL7': 'MCLG', 
-            'THDN7': 'THDNG',
-            'THRW7': 'THRWG',
-            
-            # Pattern 2: G-day calls (Friday day) get O-day (Sunday day)
-            'LPG': 'LPO',
-            'MCLG': 'MCLO',
-            'THDNG': 'THDNO',
-            'THRWG': 'THROB',
-            
-            # Pattern 3: O-day calls (Friday day) get G-day (Sunday day)
-            'LPO': 'LPG',
-            'MCLO': 'MCLG',
-            'THDNO': 'THDNG',
-            'THROB': 'THRWG',
-            
-            # Special pairs
-            'CMCG': 'CMCO',
-            'CMCO': 'CMCG'
-        }
-        
-        # Weekend consecutive pairs (same person both days)
-        self.weekend_consecutive_rules = {
-            'NE': ['NE'],  # NE Saturday gets NE Sunday
-            'MCKT_D': 'MCKG_D',  # MCKT_D Saturday gets MCKG_D Sunday
-            'MCKG_D': 'MCKT_D'   # MCKG_D Saturday gets MCKT_D Sunday
-        }
+        self.rules = self._initialize_rules()
     
-    def get_friday_pairing(self, friday_call_type: str) -> Optional[Tuple[str, str]]:
+    def _initialize_rules(self) -> List[WeekendRule]:
+        """Initialize all weekend sandwich rules"""
+        rules = []
+        
+        # LP series rules
+        rules.extend([
+            WeekendRule('LP7', 'friday', 'LPG', 'saturday'),
+            WeekendRule('LPG', 'friday', 'LPO', 'sunday'),
+            WeekendRule('LPO', 'friday', 'LPG', 'sunday'),
+        ])
+        
+        # MCL series rules
+        rules.extend([
+            WeekendRule('MCL7', 'friday', 'MCLG', 'saturday'),
+            WeekendRule('MCLG', 'friday', 'MCLO', 'sunday'),
+            WeekendRule('MCLO', 'friday', 'MCLG', 'sunday'),
+        ])
+        
+        # THD series rules
+        rules.extend([
+            WeekendRule('THDN7', 'friday', 'THDNG', 'saturday'),
+            WeekendRule('THDNG', 'friday', 'THDNO', 'sunday'),
+            WeekendRule('THDNO', 'friday', 'THDNG', 'sunday'),
+        ])
+        
+        # THR series rules
+        rules.extend([
+            WeekendRule('THRW7', 'friday', 'THRWG', 'saturday'),
+            WeekendRule('THRWG', 'friday', 'THROB', 'sunday'),
+            WeekendRule('THROB', 'friday', 'THRWG', 'sunday'),
+        ])
+        
+        # CMC series rules
+        rules.extend([
+            WeekendRule('CMCG', 'friday', 'CMCO', 'sunday'),
+            WeekendRule('CMCO', 'friday', 'CMCG', 'sunday'),
+        ])
+        
+        # NE series rules
+        rules.extend([
+            WeekendRule('NE', 'saturday', 'NE', 'sunday'),
+        ])
+        
+        # MCK series rules
+        rules.extend([
+            WeekendRule('MCKT_D', 'saturday', 'MCKG_D', 'sunday'),
+            WeekendRule('MCKG_D', 'saturday', 'MCKT_D', 'sunday'),
+        ])
+        
+        return rules
+    
+    def get_weekend_assignment(self, call_type: str, day: str) -> Optional[str]:
         """
-        Get the required weekend pairing for a Friday call
+        Get the weekend assignment for a given call type and day
         
         Args:
-            friday_call_type: The call type assigned on Friday
+            call_type: The call type (e.g., 'LP7', 'CMCG')
+            day: The day of the week ('friday' or 'saturday')
             
         Returns:
-            Tuple of (weekend_day, call_type) or None if no pairing required
-            weekend_day is 'saturday' or 'sunday'
+            The call type that should be assigned on the weekend, or None
         """
-        if friday_call_type in self.friday_to_weekend_rules:
-            weekend_call_type = self.friday_to_weekend_rules[friday_call_type]
-            
-            # Determine which day based on the pattern
-            if friday_call_type.endswith('7'):  # Night calls get Saturday
-                return ('saturday', weekend_call_type)
-            elif friday_call_type in ['CMCG', 'CMCO']:  # Special Sunday pairs
-                return ('sunday', weekend_call_type)
-            else:  # Day calls get Sunday
-                return ('sunday', weekend_call_type)
-        
+        for rule in self.rules:
+            if rule.trigger_call == call_type and rule.trigger_day == day:
+                return rule.result_call
         return None
     
-    def get_weekend_consecutive_pairing(self, saturday_call_type: str) -> Optional[str]:
+    def get_all_weekend_pairs(self, call_type: str, day: str) -> List[Tuple[str, str]]:
         """
-        Get the required Sunday pairing for a Saturday call
+        Get all weekend assignments that should be made for a call type
         
         Args:
-            saturday_call_type: The call type assigned on Saturday
+            call_type: The call type
+            day: The trigger day
             
         Returns:
-            Sunday call type or None if no consecutive pairing required
+            List of (day, call_type) pairs for weekend assignments
         """
-        if saturday_call_type in self.weekend_consecutive_rules:
-            sunday_type = self.weekend_consecutive_rules[saturday_call_type]
-            if isinstance(sunday_type, list):
-                return sunday_type[0]  # Same call type
-            else:
-                return sunday_type
-        
-        return None
+        pairs = []
+        for rule in self.rules:
+            if rule.trigger_call == call_type and rule.trigger_day == day:
+                pairs.append((rule.result_day, rule.result_call))
+        return pairs
     
-    def apply_sandwich_rules(self, assignments: List[WeekendAssignment], 
-                           unavailable_users: Set[int]) -> List[WeekendAssignment]:
+    def validate_weekend_assignment(self, assignments: Dict, date_obj: date, 
+                                   user_id: int, call_type: str) -> List[str]:
         """
-        Apply weekend sandwich rules to existing assignments
+        Validate if a weekend assignment follows the sandwich rules
         
         Args:
-            assignments: List of current weekend assignments
-            unavailable_users: Set of user IDs who are unavailable (vacation, no-call requests)
+            assignments: Dictionary of existing assignments
+            date_obj: Date of the assignment
+            user_id: User being assigned
+            call_type: Call type being assigned
             
         Returns:
-            Updated list of assignments with sandwich rules applied
+            List of validation errors (empty if valid)
         """
-        updated_assignments = assignments.copy()
+        errors = []
+        weekday = date_obj.weekday()  # 0=Monday, 6=Sunday
         
-        # Group assignments by date for easy lookup
-        assignments_by_date = {}
-        for assignment in assignments:
-            date_key = assignment.date
-            if date_key not in assignments_by_date:
-                assignments_by_date[date_key] = []
-            assignments_by_date[date_key].append(assignment)
-        
-        # Apply Friday → Weekend rules
-        for assignment in assignments:
-            # Skip if user is unavailable
-            if assignment.user_id in unavailable_users:
-                continue
-                
-            # Check if this is a Friday assignment that triggers a sandwich rule
-            if assignment.date.weekday() == 4:  # Friday = 4
-                pairing = self.get_friday_pairing(assignment.call_type)
-                
-                if pairing:
-                    weekend_day, weekend_call_type = pairing
-                    
-                    # Calculate the target weekend date
-                    if weekend_day == 'saturday':
-                        target_date = assignment.date + timedelta(days=1)
-                    else:  # sunday
-                        target_date = assignment.date + timedelta(days=2)
-                    
-                    # Check if this user is already assigned that weekend day
-                    existing_weekend_assignment = None
-                    if target_date in assignments_by_date:
-                        for weekend_assign in assignments_by_date[target_date]:
-                            if weekend_assign.user_id == assignment.user_id:
-                                existing_weekend_assignment = weekend_assign
-                                break
-                    
-                    # If no existing assignment, create the paired assignment
-                    if not existing_weekend_assignment:
-                        new_assignment = WeekendAssignment(
-                            user_id=assignment.user_id,
-                            date=target_date,
-                            call_type=weekend_call_type,
-                            is_required_pair=True
-                        )
-                        updated_assignments.append(new_assignment)
-                        
-                        # Add to lookup dict
-                        if target_date not in assignments_by_date:
-                            assignments_by_date[target_date] = []
-                        assignments_by_date[target_date].append(new_assignment)
-        
-        # Apply Saturday → Sunday consecutive rules
-        for assignment in assignments:
-            # Skip if user is unavailable
-            if assignment.user_id in unavailable_users:
-                continue
-                
-            # Check if this is a Saturday assignment that requires Sunday pairing
-            if assignment.date.weekday() == 5:  # Saturday = 5
-                sunday_call_type = self.get_weekend_consecutive_pairing(assignment.call_type)
-                
-                if sunday_call_type:
-                    sunday_date = assignment.date + timedelta(days=1)
-                    
-                    # Check if this user is already assigned Sunday
-                    existing_sunday_assignment = None
-                    if sunday_date in assignments_by_date:
-                        for sunday_assign in assignments_by_date[sunday_date]:
-                            if sunday_assign.user_id == assignment.user_id:
-                                existing_sunday_assignment = sunday_assign
-                                break
-                    
-                    # If no existing assignment, create the paired assignment
-                    if not existing_sunday_assignment:
-                        new_assignment = WeekendAssignment(
-                            user_id=assignment.user_id,
-                            date=sunday_date,
-                            call_type=sunday_call_type,
-                            is_required_pair=True
-                        )
-                        updated_assignments.append(new_assignment)
-        
-        return updated_assignments
-    
-    def validate_sandwich_compliance(self, assignments: List[WeekendAssignment]) -> List[str]:
-        """
-        Validate that assignments comply with sandwich rules
-        
-        Args:
-            assignments: List of weekend assignments to validate
+        # Check if this is a weekend assignment that should have a trigger
+        if weekday in [5, 6]:  # Saturday or Sunday
+            day_name = 'saturday' if weekday == 5 else 'sunday'
             
-        Returns:
-            List of violation messages (empty if compliant)
-        """
-        violations = []
-        
-        # Group assignments by user and date
-        user_assignments = {}
-        for assignment in assignments:
-            user_id = assignment.user_id
-            if user_id not in user_assignments:
-                user_assignments[user_id] = {}
-            user_assignments[user_id][assignment.date] = assignment.call_type
-        
-        # Check each user's assignments for sandwich rule compliance
-        for user_id, user_dates in user_assignments.items():
-            dates = sorted(user_dates.keys())
+            # Look for rules that result in this assignment
+            triggering_rules = [r for r in self.rules 
+                              if r.result_call == call_type and r.result_day == day_name]
             
-            for date in dates:
-                call_type = user_dates[date]
+            if triggering_rules:
+                # Check if the user has the triggering assignment
+                found_trigger = False
+                for rule in triggering_rules:
+                    trigger_day_offset = -1 if rule.trigger_day == 'friday' and weekday == 5 else -2
+                    if rule.trigger_day == 'friday' and weekday == 6:
+                        trigger_day_offset = -2
+                    elif rule.trigger_day == 'saturday' and weekday == 6:
+                        trigger_day_offset = -1
+                    
+                    trigger_date = date_obj + timedelta(days=trigger_day_offset)
+                    if (trigger_date in assignments and 
+                        user_id in assignments[trigger_date] and
+                        assignments[trigger_date][user_id] == rule.trigger_call):
+                        found_trigger = True
+                        break
                 
-                # Check Friday → Weekend rules
-                if date.weekday() == 4:  # Friday
-                    pairing = self.get_friday_pairing(call_type)
-                    if pairing:
-                        weekend_day, expected_call_type = pairing
-                        target_date = date + timedelta(days=1 if weekend_day == 'saturday' else 2)
-                        
-                        if target_date not in user_dates:
-                            violations.append(
-                                f"User {user_id}: Friday {call_type} on {date} requires "
-                                f"{expected_call_type} on {target_date}, but no assignment found"
-                            )
-                        elif user_dates[target_date] != expected_call_type:
-                            violations.append(
-                                f"User {user_id}: Friday {call_type} on {date} requires "
-                                f"{expected_call_type} on {target_date}, but assigned "
-                                f"{user_dates[target_date]}"
-                            )
-                
-                # Check Saturday → Sunday consecutive rules
-                if date.weekday() == 5:  # Saturday
-                    expected_sunday_type = self.get_weekend_consecutive_pairing(call_type)
-                    if expected_sunday_type:
-                        sunday_date = date + timedelta(days=1)
-                        
-                        if sunday_date not in user_dates:
-                            violations.append(
-                                f"User {user_id}: Saturday {call_type} on {date} requires "
-                                f"{expected_sunday_type} on {sunday_date}, but no assignment found"
-                            )
-                        elif user_dates[sunday_date] != expected_sunday_type:
-                            violations.append(
-                                f"User {user_id}: Saturday {call_type} on {date} requires "
-                                f"{expected_sunday_type} on {sunday_date}, but assigned "
-                                f"{user_dates[sunday_date]}"
-                            )
+                if not found_trigger:
+                    trigger_calls = [r.trigger_call for r in triggering_rules]
+                    errors.append(
+                        f"Weekend assignment {call_type} on {day_name} should be "
+                        f"paired with {trigger_calls} assignment"
+                    )
         
-        return violations
-
-def get_weekend_rules_engine() -> WeekendRulesEngine:
-    """Get an instance of the weekend rules engine"""
-    return WeekendRulesEngine()
+        return errors
